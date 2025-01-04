@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><img src="./tip-calculator-app/SPLITTER.png" alt="SPLITTER"></h1>
+
+    <div class="container">
+        <div class="box">
+            <div class="left-part">
+                <div class="bill-group">
+                    <h2>Bill</h2>
+                    <input type="number" name="bill" id="bill" class="bill-input" data-placeholder="0" placeholder="0" aria-label="Bill amount">
+                </div>
+                <div class="tip-buttons">
+                    <h2>Select Tip %</h2>
+                    <button class="tip-btn" onclick="setTip(5)">5%</button>
+                    <button class="tip-btn" onclick="setTip(10)">10%</button>
+                    <button class="tip-btn" onclick="setTip(15)">15%</button>
+                    <button class="tip-btn" onclick="setTip(25)">25%</button>
+                    <button class="tip-btn" onclick="setTip(50)">50%</button>
+                    <input type="number" name="custom-tip" id="custom-tip" class="tip-btn" data-placeholder="Custom" placeholder="Custom" aria-label="Custom tip percentage">
+                </div>
+                <div class="input-number">
+                    <h2>Number of People</h2>
+                    <input type="number" name="people" id="people" class="people-input" data-placeholder="0" placeholder="0" aria-label="Number of people">
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="mini-container">
+                    <div class="tip">
+                        <div class="tip-organization">
+                            <h3 class="separate">Tip Amount</h3>
+                            <p>/ person</p>
+                            <h3 class="separate-h3">Total</h3>
+                            <p>/ person</p>
+                        </div>
+                        <div class="number">
+                            <div id="tip-amount" class="separate-amount">$0.00</div>
+                            <div id="total-amount" class="separate-total">$0.00</div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="reset" aria-label="Reset calculator">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
